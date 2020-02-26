@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* Get fixed string */
+/* GET fixed string */
 router.get('/', function(req, res, next) {
     res.render('ps3', {title: 'Hey! How are you doing?'});
 });
