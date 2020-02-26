@@ -3,12 +3,17 @@ var router = express.Router();
 
 /* Get fixed string */
 router.get('/', function(req, res, next) {
-    res.render('ps3', {string: 'Hey! How are you doing?'});
+    res.render('ps3', {title: 'Hey! How are you doing?'});
 });
 
 /* POST string and length */
 router.post('/', function(req, res, next) {
-    res.render('ps3', {string: req.body.string, length: req.body.input.length});
+    const ps = {
+        string: req.body.title,
+        length: req.body.title.length,
+    };
+    console.log(ps);
+    res.render('ps3', {title: JSON.stringify(ps)});
 });
 
 module.exports = router;
