@@ -1,0 +1,12 @@
+<<form [formGroup]="location2" (ngSubmit)="getStat()">
+  <input type="text" formControlName="Latitude" required minlength="2"><br/>
+  <label>Longitude</label><input type="text" formControlName="longitude_bos" required minlength="2"><br/>
+  <button type="submit"> Get Stats</button>
+</form>>
+<div class="container">
+  <ul>
+    <li *ngFor="let a of astro">
+      {{astro}}
+    </li>
+  </ul>
+</div>
